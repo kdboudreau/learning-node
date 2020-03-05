@@ -14,7 +14,7 @@ greet();
 function logGreeting(fn) {
     fn();
 }
-logGreeting(greet); //parenthesis runs the function and passes the return, no parenthesis passes the funtion
+logGreeting(greet); // parenthesis runs the function and passes the return, no parenthesis passes the funtion
 
 // function expression
 var greetMe = function() {

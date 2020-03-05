@@ -1,7 +1,7 @@
 var greet = require('./greet');
 greet();
 
-// objects
+// objects lesson
 var person = {
     firstname: 'John',
     lastname: 'Doe',
