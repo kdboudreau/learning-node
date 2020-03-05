@@ -1,7 +1,6 @@
 var a = 1;
 var b = 2;
 var c = a + b;
-
 console.log(c);
 
 // function statement
@@ -18,7 +17,7 @@ logGreeting(greet); // parenthesis runs the function and passes the return, no p
 
 // function expression
 var greetMe = function() {
-    console.log("Hey girl");
+    console.log("Hey girl!");
 }
 greetMe();
 
