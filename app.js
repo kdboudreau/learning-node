@@ -40,7 +40,7 @@ function change(b) {
 
 var a = 1;
 change(a);
-console.log(a); //
+console.log(a); //prints 1. what happened inside the change function didnt impact a. b became a copy, created a new spot in memory
 
 // pass by reference
 function changeObj(d) {
@@ -51,4 +51,4 @@ function changeObj(d) {
 var c = {};
 c.prop1 = {};
 changeObj(c);
-console.log(c);
+console.log(c); // changeObj overwrites prop1 and add new property, prop2. d points to the same object in memory
