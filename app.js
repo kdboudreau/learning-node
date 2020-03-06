@@ -32,3 +32,12 @@ jane.greeting();
 console.log(john._proto_);
 console.log(jane._proto_);
 console.log(john._proto_ === jane._proto_); // this is true
+
+// pass by value
+function change(b) {
+    b = 2;
+}
+
+var a = 1;
+change(a);
+console.log(a); //
