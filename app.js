@@ -31,3 +31,4 @@ jane.greeting();
 
 console.log(john._proto_);
 console.log(jane._proto_);
+console.log(john._proto_ === jane._proto_); // this is true
