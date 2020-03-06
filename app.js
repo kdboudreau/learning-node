@@ -12,3 +12,16 @@ var person = {
 };
 person.greet();
 console.log(person['firstname']);
+
+// prototypal inheritance and function constructors
+function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+}
+
+Person.prototype.greeting = function() { // this isnt the prototype of person, rather the prototype of any object created from person
+    console.log('Hello, ' + this.firstName + ' ' + this.lastName);
+}
+
+var john = new Person('John', 'Doe');
+john.greeting();

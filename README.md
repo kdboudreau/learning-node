@@ -1,4 +1,4 @@
-# learning node
+# Learning Node
 
 ---
 
