@@ -25,3 +25,9 @@ Person.prototype.greeting = function() { // this isnt the prototype of person, r
 
 var john = new Person('John', 'Doe');
 john.greeting();
+
+var jane = new Person('Jane', 'Doe');
+jane.greeting();
+
+console.log(john._proto_);
+console.log(jane._proto_);
