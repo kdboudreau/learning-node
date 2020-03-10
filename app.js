@@ -52,3 +52,9 @@ var c = {};
 c.prop1 = {};
 changeObj(c);
 console.log(c); // changeObj overwrites prop1 and add new property, prop2. d points to the same object in memory
+
+
+// Immediately invoked function expressions
+(function() {
+    // this is a function expression
+}()); // this is immediately invoked
