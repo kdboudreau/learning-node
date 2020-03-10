@@ -58,3 +58,11 @@ console.log(c); // changeObj overwrites prop1 and add new property, prop2. d poi
 (function() {
     // this is a function expression
 }()); // this is immediately invoked
+
+var firstname = 'Jane';
+(function() {
+    var firstname = 'John';
+    console.log(firstname);
+})
+console.log(firstname);
+// John prints first, then Jane
