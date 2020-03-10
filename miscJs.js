@@ -1,6 +1,3 @@
-var greet = require('./greet');
-greet();
-
 // objects lesson
 var person = {
     firstname: 'John',
