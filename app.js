@@ -20,3 +20,9 @@ greet3.greeting = "Changed hello world!";
 
 var greet3b = require('./greet3');
 greet3b.greet(); // this prints  "Changed hello world!", this is the same object as greet3
+
+var greet4 = require('./greet4');
+var grtr = new greet4(); // this now creates a new object since this is a constructor (it has the ())
+    // we aren't just using the require to create the object as we did before, which just reuses it
+    // if it has already been created
+grtr.greet();
