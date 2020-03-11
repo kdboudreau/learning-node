@@ -24,5 +24,9 @@ greet3b.greet(); // this prints  "Changed hello world!", this is the same object
 var greet4 = require('./greet4');
 var grtr = new greet4(); // this now creates a new object since this is a constructor (it has the ())
     // we aren't just using the require to create the object as we did before, which just reuses it
-    // if it has already been created
+    // if it has already been created and therefore cached
 grtr.greet();
+
+var greet5 = require('./greet5').greet;
+greet5();
+// here we wouldnt be able to use the greeting var from greet5 because we didnt expose it
