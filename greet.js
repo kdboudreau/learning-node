@@ -11,4 +11,4 @@ exports.greet = function() {
 console.log(exports); // logs " { greet: [Function] } "
 console.log(module.exports); // logs "{ greet: [Function] } "
 
-// easiest to remember, always just use module.exports 
+// the easiest way to remember, always just use module.exports 
