@@ -12,3 +12,8 @@ console.log(exports); // logs " { greet: [Function] } "
 console.log(module.exports); // logs "{ greet: [Function] } "
 
 // the easiest way to remember, always just use module.exports 
+
+// ecma6 javascript now has modules without node
+export function greet() {
+    console.log('Hello');
+}
