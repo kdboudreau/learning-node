@@ -3,12 +3,12 @@ var greet = require('./greet');
 
 // requiring native (core) modules
 var util = require('util'); // one clue that you're importing a core module 
-    //is if theres no slash in the require
+    // is if theres no slash in the require
 var name = 'Kat';
 var greeting = util.format('Hello, %s', name);
 util.log(greeting);
 
 
-// ecma6 javascript now has modules without node
+// ECMA6 javascript now has modules without node
 import * as greeter from 'greet';
 greeter.greet();
