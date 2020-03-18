@@ -12,3 +12,26 @@ util.log(greeting);
 // ECMA6 javascript now has modules without node
 import * as greeter from 'greet';
 greeter.greet();
+
+// object properties and methods
+var obj = {
+    greet: 'Hello'
+}
+console.log(obj.greet);
+console.log(obj['greet']);
+var prop = 'greet';
+console.log(obj[prop]);
+
+// functions and arrays
+var arr = [];
+// arr.push('hello');
+arr.push(function() {
+    console.log('Hello world 1'); // haven't invoked this, it's just sitting available
+});
+arr.push(function() {
+    console.log('Hello world 2');
+});
+
+arr.forEach(function(item) {
+    item(); // this will invoke every item sitting in the array
+});
