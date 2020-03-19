@@ -2,4 +2,4 @@
 
 ---
 
-I'm learning node!
+I'm learning nodejs!
