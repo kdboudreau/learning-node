@@ -35,3 +35,42 @@ grtr.greet();
 var greet5 = require('./greet5').greet;
 greet5();
 // here we wouldnt be able to use the greeting var from greet5 because we didnt expose it
+
+
+// exports vs module.exports lecture
+var greetings = require('./greetings');
+
+// requiring native (core) modules
+var util = require('util'); // one clue that you're importing a core module 
+    // is if theres no slash in the require
+var name = 'Kat';
+var greeting = util.format('Hello, %s', name);
+util.log(greeting);
+
+
+// ECMA6 javascript now has modules without node
+import * as greeter from 'greetings';
+greeter.greet();
+
+// object properties and methods
+var obj = {
+    greet: 'Hello'
+}
+console.log(obj.greet);
+console.log(obj['greet']);
+var prop = 'greet';
+console.log(obj[prop]);
+
+// functions and arrays
+var arr = [];
+// arr.push('hello');
+arr.push(function() {
+    console.log('Hello world 1'); // haven't invoked this, it's just sitting available
+});
+arr.push(function() {
+    console.log('Hello world 2');
+});
+
+arr.forEach(function(item) {
+    item(); // this will invoke every item sitting in the array
+});
