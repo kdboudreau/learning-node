@@ -13,3 +13,5 @@ emtr.on('greet', function() {
 console.log('Hello!');
 emtr.emit('greet');
 
+// one problem with the above is that it requires magic strings
+// magic string: a string that has a special meaning in our code
