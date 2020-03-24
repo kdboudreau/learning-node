@@ -92,3 +92,23 @@ emtr.on('greet', function() {
 console.log('Hello!');
 emtr.emit('greet');
 
+
+// object.create and prototypes
+var person = {
+    firstname: '',
+    lastname: '',
+    greetfun: function() {
+        return this.firstname + ' ' + this.lastname;
+    }
+}
+
+var johnny = Object.create(person);
+johnny.firstname = 'John';
+johnny.lastname = 'Doe';
+
+var janey = Object.create(person);
+janey.firstname = 'Jane';
+janey.lastname = 'Doe';
+
+console.log(johnny.greet());
+console.log(janey.greet());
