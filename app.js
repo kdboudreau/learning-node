@@ -1,25 +1,32 @@
-var Emitter = require('events'); // node's event emitter
+var EventEmitter = require('events');
+var util = require('util');
 
-var emtr = new Emitter();
+function Greeter() {
+    this.greeting = 'Hello World!';
+}
 
-emtr.on('greet', function() {  // this is the property name
-    console.log('Somewhere, someone said hello.');
-})
+util.inherits(Greeter, EventEmitter);
 
-emtr.on('greet', function() {
-    console.log('A greeting occured!');
-})
+Greeter.prototype.greet = function() {
+    console.log(this.greeting);
+    this.emit('greet');
+}
 
-console.log('Hello!');
-emtr.emit('greet');
+var greeter1 = new Greeter();
+greeter1.on('greet', function() {
+    console.log('Someone greeted!');
+});
 
-// one problem with the above is that it requires magic strings
-// magic string: a string that has a special meaning in our code
-// heres a pattern to help avoid these
-var eventConfig = require('./config').events;
+greeter1.greet();
 
-emtr.on(eventConfig.GREET, function() {
-    console.log('Another greeting occured!');
-})
-// this way vs code can help us, and if we do get an error it will be more descriptve and helpful
-// this also allows for one place to change the var name
+Greeter.prototype.greet2 = function(data) {
+    console.log(this.greeting + ': ' + data);
+    this.emit('greet', data);
+}
+
+var greeter2 = new Greeter();
+greeter2.on('greet', function(data) {
+    console.log('Someone greeted named: ' + data);
+});
+
+greeter2.greet('Kat');
