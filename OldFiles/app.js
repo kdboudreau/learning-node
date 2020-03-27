@@ -174,3 +174,13 @@ greeter2.on('greet', function(data) {
 });
 
 greeter2.greet('Kat');
+
+
+// ES6 template literals
+var name = 'John Doe';
+
+var greetConcat = 'Hello ' + name;
+var greetTempLiterals = `Hello ${ name }`;
+
+console.log(greetConcat);
+console.log(greetTempLiterals);
