@@ -8,4 +8,4 @@ var obj = {
 
 obj.greet();
 
-Object.greet.call({ name: 'Jane Doe' });
+obj.greet.call({ name: 'Jane Doe' });
