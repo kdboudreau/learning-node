@@ -1,11 +1,25 @@
-// js .call and .apply
-var obj = {
-    name: 'John Doe',
-    greet: function() {
-        console.log(`Hello ${ this.name }`);
-    }
+util.inherits(Greeter, EventEmitter);
+
+Greeter.prototype.greet = function() {
+    console.log(this.greeting);
+    this.emit('greet');
 }
 
-obj.greet();
-obj.greet.call({ name: 'Jane Doe' });
-obj.greet.apply({ name: 'Jane Doe' });
+var greeter1 = new Greeter();
+greeter1.on('greet', function() {
+    console.log('Someone greeted!');
+});
+
+greeter1.greet();
+
+Greeter.prototype.greet2 = function(data) {
+    console.log(this.greeting + ': ' + data);
+    this.emit('greet', data);
+}
+
+var greeter2 = new Greeter();
+greeter2.on('greet', function(data) {
+    console.log('Someone greeted named: ' + data);
+});
+
+greeter2.greet('Kat');
