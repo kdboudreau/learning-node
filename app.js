@@ -33,3 +33,6 @@ console.log(john.__proto__ === jane.__proto__);
 // libuv will run while V8 is running
 // non-blocking is possible  since Node is asynchronous
 // the server can do many things without blocking the app
+
+// buffer: a temp holding spot for data being moved from one place to another
+// stream: a sequence of data made available over time. pieces of data that eventually combine into a whole
