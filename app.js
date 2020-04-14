@@ -28,6 +28,7 @@ console.log(john.__proto__ === jane.__proto__);
 
 // libuv, the event loop, and non-blocking asynchronous execution
 // system events: C++ core (libuv)
+// custom events: Javascript core (event emitter)
 // commonly, event driven non-blocking I/O in Javascript
 // libuv will run while V8 is running
 // non-blocking is possible  since Node is asynchronous
