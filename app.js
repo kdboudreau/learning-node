@@ -24,4 +24,10 @@ jane.greet();
 
 console.log(john.__proto__);
 console.log(jane.__proto__);
-console.log(john.__proto__) === console.log(jane.__proto__);
+console.log(john.__proto__ === jane.__proto__);
+
+// libuv, the event loop, and non-blocking asynchronous execution
+// commonly, event driven non-blocking I/O in Javascript
+// libuv will run while V8 is running
+// non-blocking is possible  since Node is asynchronous
+// the server can do many things without blocking the app
