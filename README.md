@@ -8,3 +8,4 @@ Some topics are:
 - streams and buffers
 - binary data, character sets, and encodings
 - buffers
+- typed arrays
