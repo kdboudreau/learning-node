@@ -13,5 +13,4 @@ var buffer = new ArrayBuffer(8)  // a byte is 8 bits; here, we're storing 8 byte
 // this is coming from v8 js engine
 var view = new Int32Array(buffer); // this is a way to deal with binary data in buffer
     // if we change the array we change the buffer, if we read from the array we read from the buffer
-    // integer stored with 32 bits
-    
+    // iint32array is array of integers stored with 32 bits
