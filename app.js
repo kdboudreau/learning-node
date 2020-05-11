@@ -7,3 +7,11 @@ console.log(buff[2]); // 108
 buff.write('wo');
 console.log(buff.toString()); // wollo
 //buffers are meant to be a finite piece of data. here, 5 characters
+
+
+var buffer = new ArrayBuffer(8)  // a byte is 8 bits; here, we're storing 8 bytes
+// this is coming from v8 js engine
+var view = new Int32Array(buffer); // this is a way to deal with binary data in buffer
+    // if we change the array we change the buffer, if we read from the array we read from the buffer
+    // integer stored with 32 bits
+    
