@@ -260,3 +260,5 @@ console.log(john.__proto__ === jane.__proto__);
 
 // buffer: a temp holding spot for data being moved from one place to another
 // stream: a sequence of data made available over time. pieces of data that eventually combine into a whole
+
+// buffer holds raw, binary data
