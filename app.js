@@ -9,8 +9,11 @@ console.log(buff.toString()); // wollo
 //buffers are meant to be a finite piece of data. here, 5 characters
 
 
-var buffer = new ArrayBuffer(8)  // a byte is 8 bits; here, we're storing 8 bytes
+var buffer = new ArrayBuffer(8)  // a byte is 8 bits; here, we're storing 8 bytes aka 64 bits
 // this is coming from v8 js engine
 var view = new Int32Array(buffer); // this is a way to deal with binary data in buffer
     // if we change the array we change the buffer, if we read from the array we read from the buffer
-    // iint32array is array of integers stored with 32 bits
+    // iint32array is array of integers stored with 32 bits, so we can only store 2 numebrs
+view[0] = 5;
+view[1] = 15;
+console.log(view); // Int32Array [ 5, 15 ]
