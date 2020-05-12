@@ -9,3 +9,4 @@ Some topics are:
 - binary data, character sets, and encodings
 - buffers
 - typed arrays
+- JS callbacks
