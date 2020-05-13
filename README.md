@@ -10,3 +10,4 @@ Some topics are:
 - buffers
 - typed arrays
 - JS callbacks
+- files and fs
