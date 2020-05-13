@@ -284,3 +284,22 @@ var view = new Int32Array(buffer); // this is a way to deal with binary data in 
 view[0] = 5;
 view[1] = 15;
 console.log(view); // Int32Array [ 5, 15 ]
+
+
+function greetCB(callbackFunction) {
+    console.log('Hello!');
+    var data = {
+        name: 'John Doe'
+    }
+    callbackFunction(data);
+}
+
+greetCB(function(data) {
+    console.log('The callback function was invoked');
+    console.log(data);
+});
+
+greetCB(function(data) {
+    console.log('A different callback function was invoked');
+    console.log(data.name);
+});
