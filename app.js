@@ -11,8 +11,8 @@ console.log(greetFS); // Hello from file World
 
 var greetFS2 = fs.readFile(__dirname + '/greet.txt', 
     function(err, data) {
-    
-    });
+     console.log(data);
+    }); // error-first callback for an asynchronous method
     // this is a popular pattern in node, "error-first callback" 
     // error-first callback: callbacks take an error object as their first parameter
     // aka null if no error, otherwise it will contain an object defining the error
