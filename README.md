@@ -11,3 +11,4 @@ Some topics are:
 - typed arrays
 - JS callbacks
 - files and fs
+- streams
