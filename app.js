@@ -8,4 +8,4 @@ var readable = fs.createReadStream(__dirname + '/greetLoremIpsum.txt',
 
 var writable = fs.createWriteStream(__dirname + '/greetLoremIpsumCopy.txt');
 
-readable.pipe(writable);
+readable.pipe(writable); //updates copy file
