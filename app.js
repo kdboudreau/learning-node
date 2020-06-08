@@ -8,3 +8,6 @@
 // we typicaly think of node as a web server, but it can also be used as an email or ftp server
 // tcp is the same concept/idea as a stream. therefore node treats the packets as streams
 // web sockets are kept pen constantly
+
+// port: once a computer receives a packet, how it knows what program to send it to; "listening" to it
+// ip address : port = socket address
