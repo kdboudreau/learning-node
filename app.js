@@ -11,3 +11,7 @@
 
 // port: once a computer receives a packet, how it knows what program to send it to; "listening" to it
 // ip address : port = socket address
+
+// http: a set of rules (and format) for data being transferred on the web; hypertext transfer protocol
+// MIME type: multipurpose internet mail extensions; a standard for specifying the type of data sent;
+//       ex. application/json, text/html, image/jpeg; 
