@@ -13,3 +13,4 @@ Some topics are:
 - files and fs
 - streams
 - app web server
+- dynamic templates
