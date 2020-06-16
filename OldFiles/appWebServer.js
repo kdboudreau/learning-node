@@ -35,3 +35,16 @@ http.createServer(function(req, resp) { // request and response
 // running node app.js will keep running, it waits for a request. can stop server by ctrl + c
 // when we hit the server using url localhost:1337 and hit enter, the page will show "hello world"
 // also, if you inspect you will see responsecode of 200 and content-type of text/plain
+
+
+// using dynamic templates
+var http = require('http');
+var fs = require('fs');
+
+http.createServer(function(req, resp) {
+    resp.writeHead(200, { 'Content-Type' : 'text/html' });
+    var html = fs.readFileSync(__dirname + '/index.htm', 'utf8'); //utf8 converts it to string
+    var message = 'Hello world...';
+    html = html.replace('{Message}', message);
+    resp.end(html);
+}).listen(1337, '127.0.0.1'); 
