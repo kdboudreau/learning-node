@@ -1,7 +1,13 @@
-// API: a set of tools for building a software application; application programming interface
-// on the webthe tools are usually made available via a set of urls which accept and send only 
-    // data via http and tcp/ip 
+// using json
+var http = require('http');
+var fs = require('fs');
 
-// endpoint: one url in a web api
-
-
+http.createServer(function(req, resp) {
+    resp.writeHead(200, { 'Content-Type' : 'application/json' });
+    var obj = {
+        firstname: 'John',
+        lastname: 'Doe'
+    };
+    resp.end(JSON.stringify(obj));
+}).listen(1337, '127.0.0.1'); 
+// outputs {"firstname":"John","lastname":"Doe"}
