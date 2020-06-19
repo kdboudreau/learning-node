@@ -15,3 +15,4 @@ Some topics are:
 - app web server
 - dynamic templates
 - routing
+- node package manager
