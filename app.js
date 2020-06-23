@@ -4,3 +4,6 @@
 
 // in order to save space, we dont store node_modules. all youll need to do is run npm install
     // and it will download everything you need based on the dependencies in the package.json
+
+var moment = require('moment');
+console.log(moment().format("ddd, hA"));
