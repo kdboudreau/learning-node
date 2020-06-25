@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kdboudreau/learning-node#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "moment": "^2.27.0"
   },
   "devDependencies": {
