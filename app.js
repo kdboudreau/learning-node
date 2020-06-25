@@ -7,6 +7,10 @@ var port = process.env.PORT || 3000;
 
 app.get('/', function(req, resp) {
     resp.send('<html><head></head><body><h1>Hello world!</h1></body></html>');
-})
+});
+
+app.get('/api', function(req, resp) {
+    resp.json({ firstname : 'John', lastname: 'Doe' });
+});
 
 app.listen('3000'); // this creates the server
