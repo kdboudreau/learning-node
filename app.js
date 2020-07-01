@@ -10,7 +10,7 @@ app.use('/assets', express.static(__dirname + '/public'));
 
 app.get('/', function(req, resp) {
     // TODO fix below
-    resp.send('<html><head><link href=assets/style.css type=text/css rel=stylesheet/></head><body><h1>Hello world!</h1></body></html>');
+    resp.send('<html><head><link href=assets/style.css type=text/css rel=stylesheet /></head><body><h1>Hello world!</h1></body></html>');
 });
 
 app.get('/api', function(req, resp) {
