@@ -8,7 +8,12 @@ var port = process.env.PORT || 3000;
 app.use('/assets', express.static(__dirname + '/public')); 
     //anything in the public folder is available by using assets
 
-app.get('/', function(req, resp) {
+app.use('/', function(req, res, next) {
+    console.log('Request URL: ' + req.url);
+    next(); //run the next middleware
+});
+
+app.get('/', function(req, resp) { // these gets are really middleware
     // TODO fix below
     resp.send('<html><head><link href=assets/style.css type=text/css rel=stylesheet /></head><body><h1>Hello world!</h1></body></html>');
 });
