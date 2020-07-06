@@ -8,6 +8,8 @@ var port = process.env.PORT || 3000;
 app.use('/assets', express.static(__dirname + '/public')); 
     //anything in the public folder is available by using assets
 
+app.set('view engine', 'ejs');
+
 app.use('/', function(req, res, next) {
     console.log('Request URL: ' + req.url);
     next(); //run the next middleware
