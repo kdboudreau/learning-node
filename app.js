@@ -19,6 +19,7 @@ app.use('/', function(req, res, next) {
 //     resp.send('<html><head><link href=assets/style.css type=text/css rel=stylesheet /></head><body><h1>Hello world!</h1></body></html>');
 // });
 
+// this dynamically replaces above uing template engine
 app.get('/', function(req, resp) { 
     resp.render('index');
 });
