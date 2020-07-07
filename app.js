@@ -15,9 +15,12 @@ app.use('/', function(req, res, next) {
     next(); //run the next middleware
 });
 
-app.get('/', function(req, resp) { // these gets are really middleware
-    // TODO fix below
-    resp.send('<html><head><link href=assets/style.css type=text/css rel=stylesheet /></head><body><h1>Hello world!</h1></body></html>');
+// app.get('/', function(req, resp) { // these gets are really middleware
+//     resp.send('<html><head><link href=assets/style.css type=text/css rel=stylesheet /></head><body><h1>Hello world!</h1></body></html>');
+// });
+
+app.get('/', function(req, resp) { 
+    resp.render('index');
 });
 
 app.get('/api', function(req, resp) {
