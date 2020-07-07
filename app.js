@@ -23,12 +23,24 @@ app.get('/', function(req, resp) {
     resp.render('index');
 });
 
+app.get('/', function(req, resp) { 
+    resp.render('index');
+});
+
+app.get('/', function(req, resp) { 
+    resp.render('index', { ID: req.params.id });
+})
+
 app.get('/api', function(req, resp) {
     resp.json({ firstname : 'John', lastname: 'Doe' });
 });
 
+// app.get('/person/:id', function(req, resp) {
+//     resp.send('<html><head></head><body><h1>Person: ' + req.params.id + '</h1></body></html>');
+// });
+
 app.get('/person/:id', function(req, resp) {
-    resp.send('<html><head></head><body><h1>Person: ' + req.params.id + '</h1></body></html>');
+    resp.render('person', { ID: req.params.id });
 });
 
 app.listen('3000'); // this creates the server
