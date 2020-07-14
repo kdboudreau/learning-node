@@ -41,8 +41,12 @@ app.get('/api', function(req, resp) {
 // });
 
 // this replaces above by dynamically generating html
+// app.get('/person/:id', function(req, resp) {
+//     resp.render('person', { ID: req.params.id });
+// });
+
 app.get('/person/:id', function(req, resp) {
-    resp.render('person', { ID: req.params.id });
+    resp.render('person', { ID: req.params.id, QSTR: req.query.qstr });
 });
 
 app.listen('3000'); // this creates the server
