@@ -1,4 +1,5 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express(); //this is a working express app
 
 var port = process.env.PORT || 3000; 
@@ -46,7 +47,7 @@ app.get('/api', function(req, resp) {
 // });
 
 app.get('/person/:id', function(req, resp) {
-    resp.render('person', { ID: req.params.id, QSTR: req.query.qstr });
+    resp.render('person', { ID: req.params.id, Qstr: req.query.qstr });
 });
 
 app.listen('3000'); // this creates the server
