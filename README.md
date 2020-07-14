@@ -18,4 +18,5 @@ Some topics are:
 - node package manager
 - middleware
 - template engines
-querystring and post parameters
+- querystring and post parameters
+- restful apis and json
