@@ -6,6 +6,9 @@ var port = process.env.PORT || 3000;
     // could use this if prod server has a port defined, that way we use either the port specified
     // by the server, of 3000 locally
 
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
 app.use('/assets', express.static(__dirname + '/public')); 
     //anything in the public folder is available by using assets
 
@@ -48,6 +51,12 @@ app.get('/api', function(req, resp) {
 
 app.get('/person/:id', function(req, resp) {
     resp.render('person', { ID: req.params.id, Qstr: req.query.qstr });
+});
+
+app.post('/person', urlencodedParser, function(req, resp) {
+    res.send('Thank you!');
+    console.log(req.body.firstname);
+    console.log(req.body.lastname);
 });
 
 app.listen('3000'); // this creates the server
