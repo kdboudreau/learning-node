@@ -2,6 +2,8 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express(); //this is a working express app
 
+var apiController = require('./controllers/apiController');
+
 var port = process.env.PORT || 3000; 
     // could use this if prod server has a port defined, that way we use either the port specified
     // by the server, of 3000 locally
@@ -37,33 +39,6 @@ app.get('/', function(req, resp) {
     resp.render('index', { ID: req.params.id });
 })
 
-app.get('/api', function(req, resp) {
-    resp.json({ firstname : 'John', lastname: 'Doe' });
-});
-
-// app.get('/person/:id', function(req, resp) {
-//     resp.send('<html><head></head><body><h1>Person: ' + req.params.id + '</h1></body></html>');
-// });
-
-// this replaces above by dynamically generating html
-// app.get('/person/:id', function(req, resp) {
-//     resp.render('person', { ID: req.params.id });
-// });
-
-app.get('/person/:id', function(req, resp) {
-    resp.render('person', { ID: req.params.id, Qstr: req.query.qstr });
-});
-
-app.post('/person', urlencodedParser, function(req, resp) {
-    resp.send('Thank you!');
-    console.log(req.body.firstname);
-    console.log(req.body.lastname);
-});
-
-app.post('/personjson', jsonParser, function(req, res) {
-    res.send('Thank you for the JSON data!');
-    console.log(req.body.firstname);
-    console.log(req.body.lastname);
-});
+apiController(app);
 
 app.listen('3000'); // this creates the server
