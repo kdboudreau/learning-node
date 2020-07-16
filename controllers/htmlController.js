@@ -1,7 +1,6 @@
 var bodyParser = require('body-parser');
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
-var jsonParser = bodyParser.json();
 
 module.exports = function(app) {
 
