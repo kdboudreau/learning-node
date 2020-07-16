@@ -20,4 +20,3 @@ Some topics are:
 - template engines
 - querystring and post parameters
 - restful apis and json
-- MEAN stack
