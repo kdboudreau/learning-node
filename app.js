@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 app.use('/assets', express.static(__dirname + '/public'));
 
 app.get('/', function(req, resp) {
-    res.render('index');
+    resp.render('index');
 });
 
 app.listen(port)
